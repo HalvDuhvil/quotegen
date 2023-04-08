@@ -27,9 +27,12 @@ function App() {
   };
 
   return (
-    <div className="flex bg-[#202632] min-h-screen items-start sm:items-center justify-center">
+    <main
+      role="main"
+      className="flex bg-[#202632] min-h-screen items-start sm:items-center justify-center"
+    >
       <Card quote={quote} handleClick={handleClick} loading={loading} />
-    </div>
+    </main>
   );
 }
 

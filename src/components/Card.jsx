@@ -8,7 +8,7 @@ const Card = ({ quote, handleClick, loading }) => {
           <p className="uppercase text-[#53ffab] text-sm sm:text-xs tracking-widest font-manrope">
             {quote.author ? `${quote.author} -` : `someone -`}
           </p>
-          <p className="text-slate-300 text-2xl sm:text-xl font-bold">{`"${quote.text}"`}</p>
+          <h1 className="text-slate-300 text-2xl sm:text-xl font-bold">{`"${quote.text}"`}</h1>
           <div className="flex items-center justify-center gap-2 font-bold">
             <hr className="border-t border-gray-500 flex-grow" />
             <p className="text-slate-300 text-3xl sm:text-xl font-bold">
@@ -17,6 +17,7 @@ const Card = ({ quote, handleClick, loading }) => {
             <hr className="border-t border-gray-500 flex-grow" />
           </div>
           <button
+            aria-label="Generate Quote"
             onClick={handleClick}
             className="absolute bottom-0 transform translate-y-1/2 left-1/2 -translate-x-1/2 p-5 sm:p-4 rounded-full bg-[#53ffab] hover:shadow-[0px_0px_40px_2px_#53ffab] active:shadow-[0px_0px_40px_2px_#53ffab] focus:shadow-[0px_0px_40px_2px_#53ffab] transition-shadow ease-in focus:outline-none"
           >
