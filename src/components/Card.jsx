@@ -1,19 +1,18 @@
 import { FaDiceFive, FaSpinner } from "react-icons/fa";
+import { BsFillPauseFill } from "react-icons/bs";
 
 const Card = ({ quote, handleClick, loading }) => {
   return (
-    <div className="flex flex-col bg-[#313a49] rounded-lg p-16 text-center gap-6 relative max-w-xs sm:max-w-md mt-20 sm:mt-0">
+    <div className="flex flex-col bg-[#313a49] rounded-xl p-16 text-center gap-6 relative max-w-xs sm:max-w-lg mt-20 sm:mt-0">
       {!loading ? (
         <>
-          <p className="uppercase text-[#53ffab] text-sm sm:text-xs tracking-widest font-manrope">
+          <p className="uppercase text-[#53ffab] text-sm tracking-widest font-manrope">
             {quote.author ? `${quote.author} -` : `someone -`}
           </p>
-          <h1 className="text-slate-300 text-2xl sm:text-xl font-bold">{`"${quote.text}"`}</h1>
+          <h1 className="text-slate-300 text-2xl font-bold">{`"${quote.text}"`}</h1>
           <div className="flex items-center justify-center gap-2 font-bold">
             <hr className="border-t border-gray-500 flex-grow" />
-            <p className="text-slate-300 text-3xl sm:text-xl font-bold">
-              &#x2223;&#x2223;
-            </p>
+            <BsFillPauseFill className="text-slate-300 text-3xl font-bold" />
             <hr className="border-t border-gray-500 flex-grow" />
           </div>
           <button
@@ -21,7 +20,7 @@ const Card = ({ quote, handleClick, loading }) => {
             onClick={handleClick}
             className="absolute bottom-0 transform translate-y-1/2 left-1/2 -translate-x-1/2 p-5 sm:p-4 rounded-full bg-[#53ffab] hover:shadow-[0px_0px_40px_2px_#53ffab] active:shadow-[0px_0px_40px_2px_#53ffab] focus:shadow-[0px_0px_40px_2px_#53ffab] transition-shadow ease-in focus:outline-none"
           >
-            <FaDiceFive className="w-7 h-7 sm:w-5 sm:h-5 pointer-events-none" />
+            <FaDiceFive className="w-8 h-8 pointer-events-none" />
           </button>
         </>
       ) : (
