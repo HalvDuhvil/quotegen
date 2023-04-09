@@ -1,4 +1,12 @@
-import { FaDiceFive, FaSpinner } from "react-icons/fa";
+import {
+  FaDiceOne,
+  FaDiceTwo,
+  FaDiceThree,
+  FaDiceFour,
+  FaDiceFive,
+  FaDiceSix,
+  FaSpinner,
+} from "react-icons/fa";
 import { BsFillPauseFill } from "react-icons/bs";
 
 const Card = ({ quote, handleClick, loading }) => {

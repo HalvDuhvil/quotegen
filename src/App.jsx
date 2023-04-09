@@ -11,11 +11,16 @@ function App() {
 
   const getQuotes = async () => {
     setLoading(true);
-    const response = await fetch("https://type.fit/api/quotes");
-    const data = await response.json();
-    const randomQuote = data[Math.floor(Math.random() * data.length)];
-    setQuote(randomQuote);
-    setLoading(false);
+    await new Promise((resolve) => {
+      setTimeout(async () => {
+        const response = await fetch("https://type.fit/api/quotes");
+        const data = await response.json();
+        const randomQuote = data[Math.floor(Math.random() * data.length)];
+        setQuote(randomQuote);
+        setLoading(false);
+        resolve();
+      }, 300);
+    });
   };
 
   useEffect(() => {
